@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Video Gallery</title>title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BEAUTY IN NATURE VIDEO GALLERY</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feauture-img">
+                    <img src="pics/image7logo.jpg" width="100%">
+                    <img src="pics/play22.png" class="play22-btn" onclick="playVideo('pics/vid1.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="pics/image4logo.jpg">
+                        <img src="pics/play.png" class="play-btn" onclick="playVideo('pics/vid2.mp4')">
+                    </div>
+                    <p>Nature Sounds of Earth Most Beautiful of Nature or<br>to make a video gallery</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="pics/pic5.jpg">
+                        <img src="pics/play.png" class="play-btn" onclick="playVideo('pics/vid3.mp4')">
+                    </div>
+                    <p>The Breathing Beauty Of Nature Scenery or<br>to make a video gallery</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="pics/pic6.jpg">
+                        <img src="pics/play.png" class="play-btn" onclick="playVideo('pics/vid4.mp4')">
+                    </div>
+                    <p>Most Beautiful Nature Around The world website or<br>to make a video gallery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="pics/vid1.mp4" type="video/mp4">
+        </video>
+        <img src="pics/close.png" class="close-btn" onclick="stopVideo()">
+    </div>
+    <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+
+        function stopVideo() {
+            videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file) {
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
